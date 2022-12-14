@@ -1,53 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="test">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modern-normalize.css">
     <link rel="stylesheet" href="style.css">
     <title>Boat loading</title>
 </head>
 <body>
     <header>
-        <a href=""><img src="png/main_name.png" alt="Main Site" width="184" height="53"></a>
-        <button><img src="png/menu_icon.png" alt="Menu" width="31" height="31" ></button>
-        <p><a href="">HOME</a></p>
-        <p><a href="">SERVICES</a></p>
-        <p><a href="">CONTACTS</a></p>
-        <a href=""><img src="svg/whatsapp_icon_blue.svg" alt=""></a>
-        <a href=""><img src="svg/telegram_icon_blue.svg" alt=""></a>
+        <a href="" ><img src="png/main_name.png" alt="Main Site" width="184" height="53"></a>
+        <button class="menu_button"><img src="svg/icon_menu.svg" alt="Menu" width="31" height="31" ></button>
+        <section class="options_menu">
+            
+            <p><a href="">HOME</a></p>
+            <p><a href="">SERVICES</a></p>
+            <p><a href="">CONTACTS</a></p>
+            
+            <a href=""><img src="svg/whatsapp_icon_blue.svg" alt=""></a>
+            <a href=""><img src="svg/telegram_icon_blue.svg" alt=""></a>
+        </section>
     </header>
     <main>
+        <h1>Landing page of MDA SHIPPING</h1>
         <section>
-            <h1>Landing page of MDA SHIPPING</h1>
-            <h2>Boat loading</h2>
-            <p>Using different container size options, we take care of the boats by securing it safely in the container.</p>
-            <img src="png/main_img.png" alt="main_img" width="102" height="90">
-            <h3>WE LOAD ALL TYPER OF BOATS</h3>
-            <img src="svg/fishing_boat.svg" alt="fishing_boat" width="102" height="90">
-            <p>Fishing boats</p>
-            <img src="svg/jet_ski.svg" alt="jet_ski" width="102" height="90">
-            <p>Jet skis</p>
-            <img src="svg/sport_boat.svg" alt="sport_boat" width="102" height="90">
-            <p>Sport boats</p>
-            <img src="svg/pontoon_boat.svg" alt="pontoon_boat" width="102" height="90">
-            <p>Pontoon boats</p>
-            <img src="svg/sail_boat.svg" alt="sail_boat" width="102" height="90">
-            <p>Sail boats</p>
-            <img src="svg/yacht.svg" alt="yacht" width="102" height="90">
-            <p>Yachts</p>
+            <h2 class="first_article">Boat loading</h2>
+            <p class="description_main">Using different container size options, we take care of the boats by securing it safely in the container.</p>
+            <img class="img_main_photo" src="png/main_img.png" alt="main_img" width="743" height="558">
+        </section>
+
+        <section>
+
+            <h3>WE LOAD ALL TYPES OF BOATS</h3>
+        <div  class="cards_container">
+            <div >
+                <img class="card_img" src="svg/fishing_boat.svg" alt="fishing_boat" >
+                <p class="card_sign">Fishing boats</p>
+            </div>
+            <div >
+                <img class="card_img" src="svg/jet_ski.svg" alt="jet_ski" width="102" height="90">
+                <p class="card_sign">Jet skis</p>
+            </div>
+            <div >
+                <img class="card_img" src="svg/sport_boat.svg" alt="sport_boat" width="102" height="90">
+                <p class="card_sign">Sport boats</p>
+            </div>
+            <div >
+                <img class="card_img" src="svg/pontoon_boat.svg" alt="pontoon_boat" width="102" height="90">
+                <p class="card_sign">Pontoon boats</p>
+            </div>
+            <div >
+                <img class="card_img" src="svg/sail_boat.svg" alt="sail_boat" width="102" height="90">
+                <p class="card_sign">Sail boats</p>
+            </div>
+            <div >
+                <img class="card_img" src="svg/yacht.svg" alt="yacht" width="102" height="90">
+                <p class="card_sign">Yachts</p>
+            </div>
+        </div>
+
         </section>
         <section>
-            <h2>Container shipment</h2>
-            <hr>
-            <p>Boats or yachts are often transported in containers as a better alternative for cost effectiveness and security reasons. We can offer flip loading for bigger boats that don’t exceed 102 inches in beam width.</p>
+            <h2 class="second_article">Container shipment</h2>
+            <hr class="line_arcticle">
+            <p class="description_second">Boats or yachts are often transported in containers as a better alternative for cost effectiveness and security reasons. We can offer flip loading for bigger boats that don’t exceed 102 inches in beam width.</p>
             <img src="png/container_with_boat.png" alt="container_with_boat">
         </section>
         <section>
-            <h2>On deck cargo</h2>
-            <hr>
-            <p>Boats or yachts are loaded/ unloaded directly from the sea or from the shore. Yachts Ships or cranes in cradles are utilized to load bigger boats or yachts.</p>
-            <img src="png/on_deck_cargo.png" alt="on_deck_cargo">
+            <h2 class="second_article">On deck cargo</h2>
+            <hr class="line_arcticle">
+            <p class="description_second">Boats or yachts are loaded/ unloaded directly from the sea or from the shore. Yachts Ships or cranes in cradles are utilized to load bigger boats or yachts.</p>
+            <img  src="png/on_deck_cargo.png" alt="on_deck_cargo">
+        </section>
+        <section>
+            <h2 class="second_article">On deck cargo</h2>
+            <hr class="line_arcticle">
+            <p class="description_second">Boats or yachts are loaded/ unloaded directly from the sea or from the shore. Yachts Ships or cranes in cradles are utilized to load bigger boats or yachts.</p>
+            <img  src="png/on_deck_cargo.png" alt="on_deck_cargo">
         </section>
         <section>
             <h2>Optional services</h2>
@@ -74,10 +104,11 @@
                 I agree with the <a href=""> Privacy policy</a>
             </p>
             <Button>SEND A MESSAGE</Button>
-            <img src="png/cargo.png" alt="cargo">
+            <img src="png/cargo.png" alt="cargo" width="100%" height="100%">
         </section>
     </main>
     <footer>
+        
         <img src="png/main_name.png" alt="">
         <p><a href="">HOME</a></p>
         <p><a href="">SERVICES</a></p>
@@ -87,16 +118,6 @@
         <p>info@cargo.us</p>
         <p>+1 912 000 0000</p>
         <p> Copyright © 2022 Cargo. All Rights reserved.</p>
-        <!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
-        target="_blank"><img id="licntDBDB" width="88" height="120" style="border:0" 
-        title="LiveInternet: показано количество просмотров и посетителей"
-        src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
-        alt=""/></a><script>(function(d,s){d.getElementById("licntDBDB").src=
-        "https://counter.yadro.ru/hit?t27.12;r"+escape(d.referrer)+
-        ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
-        (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
-        ";h"+escape(d.title.substring(0,150))+";"+Math.random()})
-        (document,screen)</script><!--/LiveInternet-->
     </footer>
 </body>
 </html>

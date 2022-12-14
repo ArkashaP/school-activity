@@ -1,5 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mulish:wght@600;700;800&display=swap');
+
 :root {
     font-size: 62.5%;
-    --primary-color: hsl(120, 100%, 100%);
-    font-family: sans-serif;
+    --description-text-color: rgba(24, 22, 45, 1);
+    --article-color: rgba(53, 121, 244, 1);
+    --first-text-color: #18162D;
+    font-family: 'Inter' ,sans-serif;
+    
 }
+
+body{
+    position: relative
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+a{
+    
+    text-decoration: none;
+    color: black;
+}
+
+h1{
+    visibility: hidden;
+}
+
+h2{
+    font-family: 'Mulish';
+    color: var(--article-color);
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+}
+
+h3{
+    color: var(--article-color);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+}
+
+header{
+    padding-top: 3rem;
+}
+
+header, section{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.first_article{
+    color: var(--first-text-color);
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 2.7rem;
+    -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+}
+
+.second_article{
+    padding-top: 5.5rem;
+
+}
+
+.main_article{
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+}
+
+.line_arcticle{
+    border-color: var(--article-color);
+    border-width: 0.2rem;
+    border-radius: 0.2rem;
+    border-inline-color: var(--article-color);
+}
+
+
+.cards_container{
+    display: flex;
+    margin: 0 -1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.card_img{
+    margin: 1rem 0 -1rem 0;
+
+}
+
+.card_sign{
+    text-align: center;
+    font-family: 'Mulish';
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}  
+
+.description_main{
+    width: 32rem;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: var(--description-text-color);
+}
+.description_second{
+    padding-right: 2rem;
+    width: 32rem;
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: var(--description-text-color);
+
+}
+
+.options_menu{
+    visibility: hidden;
+    position: absolute;
+    
+}
+
+.menu_button {
+    margin-top: -5rem;
+    margin-left: auto;
+    margin-right: 1rem;
+    display: block;
+    background-color: transparent;
+}
+
+.img_main_photo{
+    margin-left: -5rem;
+    height: 33.64rem;
+    width: auto;
+}
+
