@@ -58,7 +58,10 @@ h3{
 
 header{
     padding-top: 3rem;
-
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header, main{
@@ -254,7 +257,6 @@ hr{
     font-weight: 400;
     line-height: 2.4rem;
     color: var(--description-text-color);
-
 }
 
 .options_menu{
@@ -263,10 +265,12 @@ hr{
 .options_menu a {
     color: var(--first-text-color);
 }
+.options_menu ul{
+    all: unset;
+}
 @media all and (min-width: 600px) {
     .options_menu{
-        display: grid;
-        grid-template-columns: repeat(5, 20%);
+        
     }
     .menu_button{
         display: none;
