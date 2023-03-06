@@ -12,8 +12,12 @@ Use a better box model (opinionated).
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
+	box-sizing: =;
+	outline: blue;
+	outline-width: 2px;
 }
+
+ul {}
 
 /**
 Use a more readable tab size (opinionated).

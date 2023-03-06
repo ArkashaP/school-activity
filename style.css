@@ -5,6 +5,7 @@
     --description-text-color: rgba(24, 22, 45, 1);
     --article-color: rgba(53, 121, 244, 1);
     --first-text-color: #18162D;
+    --sel-text-color: #3579F4;
     --bright-blue: rgba(85, 145, 255, 1);
     --card-background: #F0F0FA;
     --footer-text-copyright: rgba(255, 255, 255, 0.4);
@@ -23,9 +24,10 @@ html, body {
 html{
     box-sizing: border-box;
 }
-*, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: inherit;
-}
+    outline: 1px solid #666;
+} */
 
 a{
     text-decoration: none;
@@ -35,11 +37,12 @@ a{
 
 h1{
     visibility: hidden;
-}
+  }
 
 h2{
     font-family: 'Mulish';
     color: var(--article-color);
+    
     width: max-content;
     margin-right: 2rem;
     font-weight: 700;
@@ -57,32 +60,44 @@ h3{
 }
 
 header{
+    all: unset;
     padding-top: 3rem;
     display: flex;
-    gap: 2em;
     justify-content: space-between;
     align-items: center;
 }
 
-header, main{
-    padding-left: 0.1rem;
-    padding-right: 0.1rem;
+
+header a{
+    width: min-content;
 }
 
-section, header, form{
+header div{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+section, header, form, .contacts_section div, footer div{
     padding-left: 6%;
     padding-right: 6%;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
+@media all and (min-width: 1400px) {
+    section, header, form, .contacts_section div, footer div{
+        padding-left: 13rem;
+        padding-right: 13rem;
+    }
+}
 
 ul{
-    margin-left: -4rem;
-    position: relative;
     display: flex;
     align-content: stretch;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0;
 }
 
 
@@ -100,19 +115,18 @@ li {
     font-size: 2.2rem;
     line-height: 2.6rem;
     text-align: center;
-    width: 32rem;
+    width: 42rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1rem;
 }
 
 .main_site_logo{
-    max-width: 25.6rem;
-    width: 55%;
+    max-width: 18.4rem;
 }
 @media all and (min-width: 600px) {
     .main_site_logo {
-        max-width: 31.9rem;
+        max-width: 25.6rem;
     }
 }
 
@@ -123,12 +137,18 @@ li {
     font-weight: 400;
     font-size: 3.8rem;
     line-height: 2.7rem;
-    -webkit-text-stroke: 0.2rem rgb(0, 0, 0);
+    color: transparent;
+    -webkit-background-clip: text;
+    padding-bottom: 1rem;
+    
+    background-clip: text;
+    background-image: linear-gradient(90deg, rgb(10, 32, 158), rgb(198, 233, 240), rgb(26, 162, 167));
+
 }
 
 .flex_main_article{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap-reverse;
     align-items: end;
 }
@@ -140,40 +160,45 @@ li {
 
 
 .img_main_photo{
-    width: 37.5rem;
     height: auto;
-    min-width: 55.9rem;
     max-width: 65.9rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-
 }
 .img_main_photo img{
-    position: relative;
-    margin-left: -4.5rem;
     height: 100%;
     min-width: 100%;
     max-width: 100%;
+    margin-bottom: 2rem;
+}
+.img_main_photo img:last-child{
+    display: none;
 }
 
 @media all and (min-width: 600px) {
     .img_main_photo {
-        margin-top: -5rem;
         max-width: 95.9rem;
         min-width: 65.9rem;
-
         z-index: -1;
+    }
+    .img_main_photo img:first-child{
+        display: none;
+    }
+    .img_main_photo img:last-child{
+        display: initial;
     }
 }
 
 .cards_container{
-    margin: 0 -5rem;
     display: grid;
     grid-template-columns: repeat(3, 11.5rem);
-    width: max-content;
+    padding: 0;
 }
-
+.wrapper {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
 .card_item{
     all:unset;
     text-align: center;
@@ -197,10 +222,6 @@ li {
 }
 
 @media all and (min-width: 600px) {
-    .cards_container{
-        margin: 0 0 0 4rem;
-        grid-template-columns: repeat(3, 60%);
-    }
     .cards_container img{
         padding: 2rem 25%;
     }
@@ -230,7 +251,7 @@ hr{
 .flex_article_content{
     flex-wrap: wrap;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
 }
@@ -239,8 +260,9 @@ hr{
     width: 100%;
     max-width: 70.5rem;
 }
-
-
+.services_article{
+    color: var(--first-text-color);
+}
 
 
 .description_main{
@@ -261,23 +283,34 @@ hr{
 
 .options_menu{
     display: none;
+    gap: 1.5rem;
 }
 .options_menu a {
     color: var(--first-text-color);
 }
+.options_menu a:hover {
+    color: var(--sel-text-color);
+}
 .options_menu ul{
     all: unset;
+    padding: 1rem;
+    
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
 }
-@media all and (min-width: 600px) {
-    .options_menu{
-        
-    }
-    .menu_button{
-        display: none;
-    }
+.options_menu li{
+    all: unset;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    height: 20px;
+}
+.options_menu div{
+    all: unset;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .menu_button {
-    margin-top: -4.7rem;
     margin-left: auto;
     margin-right: -1rem;
     display: block;
@@ -285,6 +318,28 @@ hr{
     border-color: transparent;
 }
 
+@media all and (min-width: 600px) {
+    .options_menu{
+        display: flex
+    }
+    .menu_button{
+        display: none;
+    }
+}
+
+
+
+.contacts_section {
+    max-width: 100%;
+    padding-right: 0;
+
+    background-color: var(--article-color);
+    border-radius: 3.5rem 3.5rem 0 0;
+
+    margin-top: 10rem;
+    padding-top: 5rem;
+    padding-bottom: 12rem;
+}
 .contacts_section h2{
     color: var(--first-text-color);
     font-family: 'Mulish';
@@ -293,36 +348,25 @@ hr{
     line-height: 4.3rem;
     color: #FFFFFF;
 }
-.contacts_section {
-    padding-right: 0;
-
-    background-color: var(--article-color);
-    border-radius: 3.5rem 3.5rem 0 0;
-    margin-right: -0.1rem;
-    margin-left: -0.1rem;
-    margin-top: 10rem;
-    padding-top: 5rem;
-    padding-bottom: 12rem;
-}
 .contacts_section img {
     width: 100%;
     height: auto;
-    max-width: 78.5rem;
+    max-width: 72.5rem;
 }
 .contacts_section div {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: stretch;
-
-
+    padding: 0;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2rem;
 }
-.contacts_section form{
-    width: 40rem;
+.contacts_section div form{
+    margin-left: 0;
+    width: min-content;
 }
 .contacts_section button{
     color: var(--button-send-color);
@@ -354,8 +398,6 @@ hr{
 }
 
 footer {
-    
-
     background-color: var(--first-text-color);
     border-radius: 3rem 3rem 0 0;
     
@@ -369,6 +411,9 @@ footer {
     font-size: 1.8rem;
     line-height: 2.2rem;
     color: #FFFFFF;
+}
+footer a:hover{
+    color: var(--sel-text-color);
 }
 footer div:first-child { /* Флекс для первого дива */
     display: flex;
