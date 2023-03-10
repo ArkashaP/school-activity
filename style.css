@@ -11,9 +11,16 @@
     --card-background: #F0F0FA;
     --footer-text-copyright: rgba(255, 255, 255, 0.4);
     --button-send-color: #8C8C8C;
+    --button-send-color-active: #ffffff;
+    --text-selection: #b69981;
     font-family: 'Inter' ,sans-serif;
 }
-
+::selection {
+    background: var(--text-selection);
+    
+    color: var(--first-text-color);
+    text-shadow: none;
+}
 body{
     position: relative
 }
@@ -34,11 +41,14 @@ a{
     text-decoration: none;
     color: white;
     font-size: 1.6rem;
+    transition-duration: 0.5s;
 }
-
+a:hover{
+    color: var(--sel-text-color);
+}
 h1{
     visibility: hidden;
-  }
+}
 
 h2{
     font-family: 'Mulish';
@@ -289,9 +299,6 @@ hr{
 .options_menu a {
     color: var(--first-text-color);
 }
-.options_menu a:hover {
-    color: var(--sel-text-color);
-}
 .options_menu ul{
     all: unset;
     padding: 1rem;
@@ -395,6 +402,15 @@ fieldset > legend {
     width: 100%;
     border-radius: 1rem;
     height: 6rem;
+    transition-duration: 0.1s;
+}
+.contacts_section button:hover,:focus, .sign_up_form button:hover,:focus{
+    background-color: #c7c6c6;
+    color: #5c5c5c;
+}
+.contacts_section button:active, .sign_up_form button:active{
+    background-color: #18162D;
+    color: var(--button-send-color-focused);
 }
 .sign_up_form button{
     margin: 1.5rem;
@@ -406,12 +422,18 @@ input[type="text"], [type="password"], [type="email"], [type="tel"], [type="date
     margin-bottom: 1.5rem;
     background-color: var(--bright-blue);
     color: rgba(255, 255, 255, 0.902);
-    border-style: none;
+    border-color: var(--bright-blue);
+    border-style: solid;
     border-radius: 1rem;
-
-    
+    transition-duration: 0.5s;
 }
-input[type="text"]:focus, [type="password"]:focus, [type="email"]:focus, [type="tel"]:focus, [type="date"]:focus ,textarea{
+input[type="text"]:focus, [type="password"]:focus, [type="email"]:focus, [type="tel"]:focus, [type="date"]:focus ,textarea:focus{
+    background-color: var(--bright-blue-focused);
+    border-style: solid;
+    border-color: #18162D;
+    color: #ffffff;
+}
+input[type="text"]:hover, [type="password"]:hover, [type="email"]:hover, [type="tel"]:hover, [type="date"]:hover ,textarea:hover{
     background-color: var(--bright-blue-focused);
     color: #ffffff;
 }
@@ -438,9 +460,6 @@ footer {
     font-size: 1.8rem;
     line-height: 2.2rem;
     color: #FFFFFF;
-}
-footer a:hover{
-    color: var(--sel-text-color);
 }
 footer div:first-child { /* Флекс для первого дива */
     display: flex;

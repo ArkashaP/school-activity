@@ -29,7 +29,7 @@
     </header>
     <main>
         <div class="sign_up_form">
-            <form method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
                     <fieldset class="secret">
@@ -44,10 +44,12 @@
                             <legend>Ваш пол:</legend>
                             <label>
                                 <input type="radio" name="gender" value="Male" checked />
-                                Муж</label>
+                                Муж
+                            </label>
                             <label>
                                 <input type="radio" name="gender" value="Female" required />
-                                Жен</label>
+                                Жен
+                            </label>
                         </fieldset>
                         <fieldset class="aplication">
                             <legend>Дата рождения:</legend>
@@ -90,7 +92,7 @@
     </main>
     <footer>
         <div>
-            <img class="main_site_logo" src="png/main_name_white.png" alt="">
+            <a href=""><img class="main_site_logo" src="png/main_name_white.png" alt=""></a>
             <div>
                 <p><a href="">HOME</a></p>
                 <p><a href="">SERVICES</a></p>
