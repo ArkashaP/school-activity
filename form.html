@@ -11,10 +11,10 @@
 <body>
     <header>
         <div>
-            <a href="" ><img class="main_site_logo" src="svg/main_name.svg" alt="Main Site" ></a>
+            <a href="index.html" ><img class="main_site_logo" src="svg/main_name.svg" alt="Main Site" ></a>
             <nav class="options_menu">
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="">SERVICES</a></li>
                     <li><a href="">CONTACTS</a></li>
                 </ul>
@@ -32,60 +32,62 @@
             <form name="contact" method="POST" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
                 <div>
-                    <fieldset class="secret">
-                        <legend>Пользовательские данные</legend>
-                        <fieldset class="aplication">
-                            <legend>ФИО:</legend>
+                    <fieldset>
+                        <legend>User data</legend>
+                        <fieldset>
+                            <legend>Full name:</legend>
                             <label>
-                                <input type="text" required="" name="fio" placeholder="ФИО" />
+                                <input type="text" required="" name="fio" 
+                                placeholder="Full name" />
                             </label>
                         </fieldset>
-                        <fieldset class="aplication">
-                            <legend>Ваш пол:</legend>
+                        <fieldset>
+                            <legend>Gender:</legend>
                             <label>
                                 <input type="radio" name="gender" value="Male" checked />
-                                Муж
+                                Male
                             </label>
                             <label>
                                 <input type="radio" name="gender" value="Female" required />
-                                Жен
+                                Female
                             </label>
                         </fieldset>
-                        <fieldset class="aplication">
-                            <legend>Дата рождения:</legend>
+                        <fieldset>
+                            <legend>Date of birth:</legend>
                             <label>
                                 <input type="date" required="" name="date" />
                             </label>
                         </fieldset>
-                        <fieldset class="aplication">
-                            <legend>Пароль:</legend>
+                        <fieldset>
+                            <legend>Password:</legend>
                             <label>
-                                <input type="password" id="userPassword" name="password"
-                                    placeholder="Введите не менее 8 символов" required minlength="8" />
+                                <input type="password" name="password"
+                                    placeholder="At least 8 characters" 
+                                    required minlength="8" />
                             </label>
                         </fieldset>
                     </fieldset>
                     <fieldset class="public">
-                        <legend>Контактная информация</legend>
-                        <fieldset class="aplication">
+                        <legend>Contact data</legend>
+                        <fieldset>
                             <legend>Email:</legend>
                             <label>
-                                <input class="pole" type="email" required="" name="email"
-                                    placeholder="email@youradress.com" /></label>
+                                <input type="email" required="" name="email"
+                                    placeholder="email@mail.com"/></label>
                         </fieldset>
-                        <fieldset class="aplication">
-                            <legend>Телефон:</legend>
-                            <input class="pole" type="tel" name="phone" placeholder="+7(xxx) xxx xx xx" />
+                        <fieldset>
+                            <legend>Phone number:</legend>
+                            <input type="tel" name="phone" placeholder="+7 (xxx) xxx-xx-xx" />
                         </fieldset>
-                        <fieldset class="aplication">
-                            <legend>Удобный интервал для связи:</legend>
-                            <input class="pole" type="text" name="graphic" placeholder="утро, день, вечер" />
+                        <fieldset>
+                            <legend>Time to call:</legend>
+                            <input type="text" name="graphic" placeholder="morning, afternoon, evening" />
                         </fieldset>
                     </fieldset>
                 </div>
                 <div>
-                    <button type="reset">Сбросить</button>
-                    <button type="submit">Отправить</button>
+                    <button type="reset">Reset</button>
+                    <button type="submit">Send</button>
                 </div>
             </form>
         </div>
