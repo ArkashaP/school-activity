@@ -6,7 +6,8 @@
     --article-color: rgba(53, 121, 244, 1);
     --first-text-color: #18162D;
     --sel-text-color: #3579F4;
-    --bright-blue: rgba(85, 145, 255, 1);
+    --bright-blue: #5591ff;
+    --bright-blue-focused: #3869c4;
     --card-background: #F0F0FA;
     --footer-text-copyright: rgba(255, 255, 255, 0.4);
     --button-send-color: #8C8C8C;
@@ -329,7 +330,7 @@ hr{
 
 
 
-.contacts_section {
+.contacts_section, .sign_up_form{
     max-width: 100%;
     padding-right: 0;
 
@@ -353,7 +354,7 @@ hr{
     height: auto;
     max-width: 72.5rem;
 }
-.contacts_section div {
+.contacts_section div, .sign_up_form form div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -364,11 +365,27 @@ hr{
     font-size: 1.6rem;
     line-height: 2rem;
 }
+fieldset {
+    border-width: 0.6rem;
+    border-radius: 1rem;
+    border-color: var(--bright-blue);
+    border-style: dashed;
+    margin: 0.5rem;
+}
+fieldset > legend {
+    font-size: 1.5rem;
+}
+.sign_up_form form div{
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-evenly;
+    max-width: 90rem;
+}
 .contacts_section div form{
     margin-left: 0;
     width: min-content;
 }
-.contacts_section button{
+.contacts_section button, .sign_up_form button{
     color: var(--button-send-color);
     font-family: 'Inter';
     font-weight: 700;
@@ -379,14 +396,24 @@ hr{
     border-radius: 1rem;
     height: 6rem;
 }
-.contacts_section input[type="text"] ,textarea{
-    width: 100%;
+.sign_up_form button{
+    margin: 1.5rem;
+    width: 40%;
+    max-width: 25rem;
+}
+input[type="text"], [type="password"], [type="email"], [type="tel"], [type="date"] ,textarea{
     padding: 2rem;
     margin-bottom: 1.5rem;
     background-color: var(--bright-blue);
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.902);
     border-style: none;
     border-radius: 1rem;
+
+    
+}
+input[type="text"]:focus, [type="password"]:focus, [type="email"]:focus, [type="tel"]:focus, [type="date"]:focus ,textarea{
+    background-color: var(--bright-blue-focused);
+    color: #ffffff;
 }
 @media all and (min-width: 600px) {
     .contacts_section{
@@ -403,7 +430,7 @@ footer {
     
     padding-top: 5rem;
     padding-bottom: 2rem;
-
+    
     margin-top: -5rem;
 
     text-align: center;
@@ -449,5 +476,8 @@ footer div:first-child img:first-child{ /* Бренд компании (карт
 }
 
 ::-webkit-input-placeholder{
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.425);
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }

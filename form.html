@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="modern-normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Boat loading</title>
+</head>
+<body>
+    <header>
+        <div>
+            <a href="" ><img class="main_site_logo" src="svg/main_name.svg" alt="Main Site" ></a>
+            <nav class="options_menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">CONTACTS</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="options_menu">
+            <a href=""><img src="svg/whatsapp_icon_blue.svg" alt=""></a>
+            <a href=""><img src="svg/telegram_icon_blue.svg" alt=""></a>
+        </div>
+        <button class="menu_button"><img src="svg/icon_menu.svg" alt="Menu" width="31" height="31" ></button>
+        
+    </header>
+    <main>
+        <div class="sign_up_form">
+            <form method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+                <div>
+                    <fieldset class="secret">
+                        <legend>Пользовательские данные</legend>
+                        <fieldset class="aplication">
+                            <legend>ФИО:</legend>
+                            <label>
+                                <input type="text" required="" name="fio" placeholder="ФИО" />
+                            </label>
+                        </fieldset>
+                        <fieldset class="aplication">
+                            <legend>Ваш пол:</legend>
+                            <label>
+                                <input type="radio" name="gender" value="Male" checked />
+                                Муж</label>
+                            <label>
+                                <input type="radio" name="gender" value="Female" required />
+                                Жен</label>
+                        </fieldset>
+                        <fieldset class="aplication">
+                            <legend>Дата рождения:</legend>
+                            <label>
+                                <input type="date" required="" name="date" />
+                            </label>
+                        </fieldset>
+                        <fieldset class="aplication">
+                            <legend>Пароль:</legend>
+                            <label>
+                                <input type="password" id="userPassword" name="password"
+                                    placeholder="Введите не менее 8 символов" required minlength="8" />
+                            </label>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset class="public">
+                        <legend>Контактная информация</legend>
+                        <fieldset class="aplication">
+                            <legend>Email:</legend>
+                            <label>
+                                <input class="pole" type="email" required="" name="email"
+                                    placeholder="email@youradress.com" /></label>
+                        </fieldset>
+                        <fieldset class="aplication">
+                            <legend>Телефон:</legend>
+                            <input class="pole" type="tel" name="phone" placeholder="+7(xxx) xxx xx xx" />
+                        </fieldset>
+                        <fieldset class="aplication">
+                            <legend>Удобный интервал для связи:</legend>
+                            <input class="pole" type="text" name="graphic" placeholder="утро, день, вечер" />
+                        </fieldset>
+                    </fieldset>
+                </div>
+                <div>
+                    <button type="reset">Сбросить</button>
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <img class="main_site_logo" src="png/main_name_white.png" alt="">
+            <div>
+                <p><a href="">HOME</a></p>
+                <p><a href="">SERVICES</a></p>
+                <p><a href="">CONTACTS</a></p>
+            </div>
+            <div>
+                <a href=""><img src="svg/whatsapp_icon.svg" alt=""></a>
+                <a href=""><img src="svg/telegram_icon.svg" alt=""></a>
+                <p><a href="mailto:info@cargo.us">info@cargo.us</a></p>
+                <a href="tel:+19120000000">+1 912 000 0000</a>
+            </div>
+        </div>
+        <p class="copyright_text"> Copyright © 2022 Cargo. All Rights reserved.</p>
+    </footer>
+</body>
+</html>
